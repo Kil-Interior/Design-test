@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>KIL ARCHITECTURE INTERIOR</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Nanum Myeongjo', serif; 
+            background-color: #ebeae6; /* 오래된 종이 질감의 베이지 */
+            color: #1a1a1a;
+            padding: 40px; /* 화면 전체에 테두리 효과를 주기 위한 여백 */
+        }
+
+        /* 전체를 감싸는 큰 프레임 */
+        .outer-wrapper {
+            border: 1px solid #222;
+            background-color: #fff;
+            min-height: calc(100vh - 80px);
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 헤더: 신문 마스트헤드 스타일 */
+        header {
+            padding: 60px 0;
+            text-align: center;
+            border-bottom: 2px solid #222;
+        }
+        .logo { 
+            font-size: 2.5rem; 
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            margin-bottom: 20px;
+        }
+        .subtitle {
+            font-size: 0.9rem;
+            letter-spacing: 0.5em;
+            color: #555;
+            text-transform: uppercase;
+        }
+
+        /* 메뉴: 선으로 구분된 정갈한 스타일 */
+        nav {
+            border-bottom: 1px solid #222;
+            display: flex;
+            justify-content: center;
+        }
+        nav a {
+            padding: 15px 40px;
+            text-decoration: none;
+            color: #222;
+            font-size: 0.85rem;
+            border-right: 1px solid #222;
+        }
+        nav a:first-child { border-left: 1px solid #222; }
+
+        /* 메인 콘텐츠 영역 */
+        .content {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1px 1fr; /* 좌우 분할과 중앙 선 */
+        }
+
+        .side-text {
+            padding: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .side-text h2 {
+            font-size: 1.8rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .side-text p {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: #444;
+            text-align: justify; /* 양끝 정렬로 책 같은 느낌 */
+        }
+
+        .side-image {
+            background: #dcdcdc; /* 시공 사진 들어갈 자리 */
+            height: 100%;
+        }
+
+        .divider { background-color: #222; }
+
+        /* 하단 정보부 */
+        footer {
+            border-top: 2px solid #222;
+            padding: 40px 80px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            background: #f9f9f9;
+        }
+
+        /* 반응형 제외 (구식 스타일은 큼직한 데스크탑 뷰가 제맛이지만 최소한의 조치) */
+        @media (max-width: 1024px) {
+            body { padding: 10px; }
+            .content { grid-template-columns: 1fr; }
+            .divider { display: none; }
+            .side-image { height: 400px; order: -1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="outer-wrapper">
+        <header>
+            <div class="logo">吉建築 (길건축)</div>
+            <div class="subtitle">Architecture & Interior Design Studio</div>
+        </header>
+
+        <nav>
+            <a href="#">HISTORY</a>
+            <a href="#">WORKS</a>
+            <a href="#">PHILOSOPHY</a>
+            <a href="#">CONTACT</a>
+        </nav>
+
+        <main class="content">
+            <section class="side-text">
+                <h2>시간의 흐름을 견디는<br>단단한 공간의 미학</h2>
+                <p>
+                    우리는 유행에 민감하게 반응하기보다, 10년 뒤에도 변함없는 가치를 지니는 공간을 지향합니다. 
+                    천안의 풍경과 조화되는 재료를 선택하고, 그 안에서 살아갈 사람의 동선을 가장 정직하게 설계합니다. 
+                    길건축이 만드는 공간은 화려함보다는 깊이감을, 드러냄보다는 채워짐을 우선합니다.
+                </p>
+            </section>
+            
+            <div class="divider"></div>
+
+            <section class="side-image">
+                <!-- 실제로는 메인 프로젝트의 흑백 혹은 톤 다운된 사진이 들어갑니다 -->
+                <div style="width:100%; height:100%; background:url('https://via.placeholder.com/800x1000/eeeeee/999999?text=Main+Project+Photo') center/cover;"></div>
+            </section>
+        </main>
+
+        <footer>
+            <div>
+                <strong>KIL ARCHITECTURE</strong><br>
+                충청남도 천안시 서북구 인테리어길 123
+            </div>
+            <div style="text-align: right;">
+                ESTABLISHED 2026<br>
+                TEL. 041-000-0000
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>

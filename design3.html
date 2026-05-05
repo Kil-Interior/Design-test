@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Interior Design</title>
+    <style>
+        /* 기본 스타일 초기화 */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Pretendard', sans-serif; 
+            background-color: #f9f9f7; /* 차분한 뉴트럴 톤 */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* 헤더: 미니멀 & 고정 */
+        header {
+            position: fixed;
+            top: 0; width: 100%;
+            padding: 30px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+        .logo { font-weight: 700; font-size: 1.2rem; letter-spacing: 2px; }
+        nav a { margin-left: 30px; text-decoration: none; color: #333; font-size: 0.9rem; }
+
+        /* 히어로 섹션: 타이포그래피 강조 */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 10%;
+        }
+        .hero h1 { 
+            font-size: 5rem; 
+            line-height: 1.1; 
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+        .hero h1 span { font-weight: 600; display: block; }
+        .hero p { font-size: 1.1rem; color: #666; max-width: 500px; }
+
+        /* 비대칭 콘텐츠 섹션 */
+        .section {
+            padding: 150px 10%;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 20px;
+            align-items: center;
+        }
+
+        .image-box {
+            grid-column: 1 / 8; /* 왼쪽에서 중앙 너머까지 */
+            height: 600px;
+            background: #e0e0e0;
+            overflow: hidden;
+            position: relative;
+        }
+        .image-box img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s; }
+        .image-box:hover img { transform: scale(1.05); }
+
+        .text-box {
+            grid-column: 8 / 13; /* 오른쪽 배치 */
+            padding-left: 50px;
+            z-index: 2;
+        }
+        .text-box h2 { font-size: 2.5rem; margin-bottom: 20px; font-weight: 400; }
+        .text-box .dash { width: 40px; height: 1px; background: #333; margin-bottom: 20px; }
+
+        /* 비대칭 반전 섹션 */
+        .section.reverse .image-box { grid-column: 5 / 13; }
+        .section.reverse .text-box { grid-column: 1 / 5; padding-left: 0; padding-right: 50px; text-align: right; }
+        .section.reverse .dash { margin-left: auto; }
+
+        /* 푸터 */
+        footer { padding: 100px 10%; border-top: 1px solid #eee; font-size: 0.8rem; color: #999; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 3rem; }
+            .section, .section.reverse { display: block; padding: 80px 5%; }
+            .image-box { height: 300px; margin-bottom: 30px; }
+            .text-box { padding: 0 !important; text-align: left !important; }
+            .dash { margin-left: 0 !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">KIL ARCHITECTURE</div>
+        <nav>
+            <a href="#">Works</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 히어로 섹션 -->
+        <section class="hero">
+            <h1>공간에 <span>철학을 담다</span></h1>
+            <p>우리는 단순한 시공을 넘어, 그곳에 머무는 사람의 삶과 계절의 변화를 설계합니다.</p>
+        </section>
+
+        <!-- 프로젝트 01: 비대칭 정방향 -->
+        <section class="section">
+            <div class="image-box">
+                <!-- <img src="your-image-url.jpg" alt="Project 01"> -->
+                <div style="width:100%; height:100%; background:#d1d1cc;"></div> <!-- 이미지 대용 -->
+            </div>
+            <div class="text-box">
+                <div class="dash"></div>
+                <h2>Modern <br>Minimalism</h2>
+                <p>여백을 통해 공간의 본질을 드러내는 작업입니다. 불필요한 요소를 덜어내고 빛과 그림자의 조화를 강조했습니다.</p>
+            </div>
+        </section>
+
+        <!-- 프로젝트 02: 비대칭 반전 -->
+        <section class="section reverse">
+            <div class="text-box">
+                <div class="dash"></div>
+                <h2>Natural <br>Texture</h2>
+                <p>나무와 돌, 자연의 질감을 실내로 들여와 시간이 흐를수록 깊어지는 공간을 제안합니다.</p>
+            </div>
+            <div class="image-box">
+                <div style="width:100%; height:100%; background:#c7c7c2;"></div> <!-- 이미지 대용 -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 KIL Architecture Interior. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

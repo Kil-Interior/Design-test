@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>KIL ARCHITECTURE | MAGAZINE</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Noto+Serif+KR:wght@300;700&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Noto Serif KR', serif; 
+            background-color: #f2f0ed; /* 차분한 베이지 그레이 */
+            color: #222;
+            line-height: 1.7;
+        }
+
+        /* 헤더: 아주 얇은 선과 대문자 타이포 */
+        header {
+            padding: 30px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            border-bottom: 1px solid #d1cec8;
+        }
+        .logo { 
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem; 
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #222;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-left: 40px;
+        }
+
+        /* 메인 콘텐츠: 잡지 레이아웃 */
+        .magazine-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 80px 50px;
+        }
+
+        .intro-block {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 100px;
+        }
+        .intro-block h1 {
+            font-size: 4.5rem;
+            line-height: 1;
+            font-family: 'Playfair Display', serif;
+        }
+        .intro-block h1 i { font-weight: 400; } /* 이탤릭 강조 */
+        .intro-block p {
+            max-width: 350px;
+            font-size: 0.95rem;
+            color: #555;
+            padding-bottom: 10px;
+        }
+
+        /* 프로젝트 리스트: 세로형 화보 느낌 */
+        .featured-project {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 100px;
+            align-items: center;
+        }
+        .project-meta {
+            font-family: 'Playfair Display', serif;
+        }
+        .project-number {
+            font-size: 8rem;
+            color: #e6e3de; /* 배경과 대비가 낮은 큰 숫자 */
+            line-height: 1;
+            margin-bottom: -40px;
+            font-weight: 700;
+        }
+        .project-meta h2 {
+            font-size: 2.5rem;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 20px;
+        }
+        .project-meta .description {
+            font-family: 'Noto Serif KR', serif;
+            font-size: 1rem;
+            color: #444;
+            margin-bottom: 30px;
+        }
+        .read-more {
+            text-decoration: none;
+            color: #222;
+            font-size: 0.8rem;
+            border-bottom: 1px solid #222;
+            padding-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 700px;
+            background: #ddd; /* 프로젝트 메인 화보 이미지 */
+            box-shadow: 20px 20px 60px rgba(0,0,0,0.05);
+        }
+
+        footer {
+            padding: 60px 50px;
+            border-top: 1px solid #d1cec8;
+            margin-top: 100px;
+            text-align: center;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 900px) {
+            .intro-block { flex-direction: column; align-items: flex-start; }
+            .intro-block h1 { font-size: 3rem; margin-bottom: 30px; }
+            .featured-project { grid-template-columns: 1fr; gap: 40px; }
+            .project-image { height: 400px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">KIL ARCHITECTURE</div>
+        <nav class="nav-links">
+            <a href="#">Works</a>
+            <a href="#">Studio</a>
+            <a href="#">Archive</a>
+            <a href="#">Journal</a>
+        </nav>
+    </header>
+
+    <div class="magazine-container">
+        <!-- 상단 인트로 -->
+        <div class="intro-block">
+            <h1>Fine <i>Space</i>,<br>Fine Life.</h1>
+            <p>천안의 풍경과 조화로운 삶을 연구하는 길건축의 공간 기록집입니다.</p>
+        </div>
+
+        <!-- 메인 프로젝트 섹션 -->
+        <section class="featured-project">
+            <div class="project-meta">
+                <div class="project-number">01</div>
+                <h2>계절이 머무는 집</h2>
+                <div class="description">
+                    거실 깊숙이 들어오는 겨울의 햇살과 여름의 바람을 설계했습니다. 
+                    자연과 경계 없는 삶을 지향하는 주거 프로젝트입니다.
+                </div>
+                <a href="#" class="read-more">View Project</a>
+            </div>
+            <div class="project-image">
+                <!-- 실제 이미지 들어갈 자리 -->
+                <div style="width:100%; height:100%; background:url('https://via.placeholder.com/800x1000/d8d5d0/666666?text=Magazine+Photo') center/cover;"></div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        &copy; 2026 KIL ARCHITECTURE INTERIOR JOURNAL. ALL RIGHTS RESERVED.
+    </footer>
+
+</body>
+</html>

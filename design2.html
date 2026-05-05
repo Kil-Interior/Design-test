@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>KIL Architecture & Interior</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;500&family=Pretendard:wght@300;400&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Pretendard', sans-serif; 
+            background-color: #f4f4f2; /* 부드러운 미색 */
+            color: #222;
+        }
+
+        /* 헤더: 안정적인 중앙 로고 타입 */
+        header {
+            padding: 40px 0;
+            text-align: center;
+            border-bottom: 1px solid #ddd; /* 얇은 선으로 경계 */
+            background: #fff;
+        }
+        .logo { 
+            font-family: 'Noto Serif KR', serif;
+            font-size: 1.8rem; 
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+        }
+        nav a { margin: 0 20px; text-decoration: none; color: #555; font-size: 0.85rem; letter-spacing: 1px; }
+
+        /* 메인 비주얼: 안정적인 풀 레이아웃 */
+        .main-visual {
+            position: relative;
+            height: 80vh;
+            background: #e0e0e0; /* 이곳에 메인 시공 사진 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .visual-text {
+            text-align: center;
+            background: rgba(255,255,255,0.9);
+            padding: 50px 80px;
+            border: 1px solid #eee;
+        }
+        .visual-text h2 { 
+            font-family: 'Noto Serif KR', serif;
+            font-size: 2.2rem;
+            font-weight: 300;
+            margin-bottom: 15px;
+        }
+
+        /* 포트폴리오 그리드: 정갈한 2단 구성 */
+        .container { max-width: 1200px; margin: 0 auto; padding: 100px 20px; }
+        .section-title {
+            text-align: center;
+            margin-bottom: 80px;
+            font-family: 'Noto Serif KR', serif;
+        }
+        .section-title hr { width: 30px; margin: 20px auto; border: 0; border-top: 1px solid #333; }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px 40px;
+        }
+        .project-item img { width: 100%; height: 450px; object-fit: cover; filter: grayscale(20%); }
+        .project-info { margin-top: 20px; text-align: center; }
+        .project-info h3 { font-size: 1.1rem; font-weight: 400; margin-bottom: 5px; }
+        .project-info p { font-size: 0.85rem; color: #888; }
+
+        footer {
+            padding: 80px 0;
+            background: #fff;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #777;
+            line-height: 2;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">KIL ARCHITECTURE</div>
+        <nav>
+            <a href="#">ABOUT</a>
+            <a href="#">PROJECTS</a>
+            <a href="#">PROCESS</a>
+            <a href="#">CONTACT</a>
+        </nav>
+    </header>
+
+    <section class="main-visual">
+        <div class="visual-text">
+            <h2>공간, 시간의 깊이를 담다</h2>
+            <p>천안의 사계절과 조화되는 지속 가능한 디자인</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="section-title">
+            <h2>SELECTED PROJECTS</h2>
+            <hr>
+        </div>
+
+        <div class="project-grid">
+            <div class="project-item">
+                <div style="width:100%; height:450px; background:#ccc;"></div>
+                <div class="project-info">
+                    <h3>성성동 주거 프로젝트</h3>
+                    <p>Residential / 2026</p>
+                </div>
+            </div>
+            <div class="project-item">
+                <div style="width:100%; height:450px; background:#bbb;"></div>
+                <div class="project-info">
+                    <h3>불당동 오피스 디자인</h3>
+                    <p>Commercial Office / 2025</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>길건축 인테리어 | 대표: 000 | 충청남도 천안시 서북구 ...</p>
+        <p>&copy; 2026 KIL ARCHITECTURE INTERIOR. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

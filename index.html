@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디자인 시안 선택</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+            font-family: 'Pretendard', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .design-box {
+            width: 200px;
+            height: 250px;
+            background-color: #ffffff;
+            border: 2px solid #ddd;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* 마우스를 올렸을 때 효과 */
+        .design-box:hover {
+            transform: translateY(-10px);
+            border-color: #007bff;
+            box-shadow: 0 10px 15px rgba(0,0,0,0.15);
+            color: #007bff;
+        }
+
+        .design-box span {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .design-box p {
+            margin: 0;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- href="링크주소" 부분에 실제 연결할 페이지 주소를 넣으세요 -->
+        <a href="design1.html" class="design-box">
+            <span>1</span>
+            <p>시안 A 타입</p>
+        </a>
+
+        <a href="design2.html" class="design-box">
+            <span>2</span>
+            <p>시안 B 타입</p>
+        </a>
+
+        <a href="design3.html" class="design-box">
+            <span>3</span>
+            <p>시안 C 타입</p>
+        </a>
+
+        <a href="design4.html" class="design-box">
+            <span>4</span>
+            <p>시안 D 타입</p>
+        </a>
+
+        <a href="design5.html" class="design-box">
+            <span>5</span>
+            <p>시안 E 타입</p>
+        </a>
+    </div>
+
+</body>
+</html>
